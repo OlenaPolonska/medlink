@@ -1,0 +1,74 @@
+.medlink-form input[type=text], .medlink-form textarea, .medlink-form {
+  border: 1px solid #ACACAC;
+  border-radius: 3px;
+}
+
+.medlink-form input[type=submit],
+.medlink-form input::file-selector-button {
+  background: #444;
+  color: #F1F1F1;
+  padding: 6px 20px;
+  border-radius: 3px;
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(173, 173, 173) 100%);
+  }
+  50% {
+    background: linear-gradient(90deg, rgb(173, 173, 173) 0%, rgb(68, 68, 68) 100%);
+  }
+  100% {
+    background: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(173, 173, 173) 100%);
+  }
+}
+.medlink-form {
+  padding: 10px 20px;
+  color: #444;
+  background: #F1F1F1;
+}
+.medlink-form .acf-input {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+.medlink-form .acf-input-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.medlink-form .acf-required {
+  color: #AC1222;
+}
+.medlink-form .description {
+  font-size: small;
+  font-style: italic;
+  margin: 0;
+}
+.medlink-form input[type=text], .medlink-form textarea {
+  padding: 10px;
+}
+.medlink-form input[type=submit].wait {
+  background: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgb(173, 173, 173) 100%);
+  animation: gradient 3s ease infinite;
+}
+.medlink-form .error {
+  color: #AC1222;
+}
+.medlink-form.readonly {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.medlink-form .save-result {
+  display: none;
+}
+.medlink-form .save-result.success {
+  color: darkgreen;
+}
+
+.medlink-container .medlink-hero-image {
+  max-width: 100%;
+  object-fit: contain;
+  height: auto;
+}
+
+/*# sourceMappingURL=public.css.map */

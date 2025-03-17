@@ -1,0 +1,98 @@
+$border-color: #ACACAC;
+$primary-color: #444;
+$inverse-color: #F1F1F1;
+$warning-color: #AC1222;
+$success-color: darkgreen;
+
+%border {
+	border: 1px solid $border-color;
+	border-radius: 3px;
+}
+
+%button {
+	background: $primary-color;
+    color: $inverse-color;
+    padding: 6px 20px;
+    border-radius: 3px;
+}
+
+@keyframes gradient {
+	0% {
+		background: linear-gradient(90deg, rgba(68,68,68,1) 0%, rgba(173,173,173,1) 100%);
+	}
+	50% {
+		background: linear-gradient(90deg, rgba(173,173,173,1) 0%, rgba(68,68,68,1) 100%);
+	}
+	100% {
+		background: linear-gradient(90deg, rgba(68,68,68,1) 0%, rgba(173,173,173,1) 100%);
+	}
+}
+
+.medlink-form {
+	@extend %border;
+	padding: 10px 20px;
+	color: $primary-color;
+	background: $inverse-color;
+	// width: 100%;
+
+	.acf-input {
+		margin: 10px 0;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.acf-input-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.acf-required {
+        color: $warning-color;
+    }
+
+	.description {
+		font-size: small;
+		font-style: italic;
+		margin: 0;
+	}
+
+	input[type=text], textarea {
+		@extend %border;
+		padding: 10px;
+	}
+
+	input[type='submit'], 
+	input::file-selector-button {
+		@extend %button;
+	}
+
+	input[type='submit'].wait {
+		background: linear-gradient(90deg, rgba(68,68,68,1) 0%, rgba(173,173,173,1) 100%);
+		animation: gradient 3s ease infinite;
+	}
+	
+	.error {
+		color: $warning-color;
+	}
+
+	&.readonly {
+		pointer-events: none;
+		opacity: 0.5;
+	}
+
+	.save-result {
+		display: none;
+	}
+
+	.save-result.success {
+		color: $success-color;
+	}
+}
+
+.medlink-container {
+	.medlink-hero-image {
+		max-width: 100%;
+		object-fit: contain;
+		height: auto;
+	}
+}
